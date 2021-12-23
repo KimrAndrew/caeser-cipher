@@ -12,8 +12,8 @@ def encrypt(char,shift):
         if shifted_code > ord('z'):
             wrap = shifted_code
             shifted_code = ord('a') + wrap
-            shifted_char = chr(shifted_code)
-            return (shifted_char + encrypted)
+        shifted_char = chr(shifted_code)
+        return shifted_char
     else:
         return char
 
@@ -35,4 +35,8 @@ def encrypt(char,shift):
     # return encrypted 
 
 if __name__ == '__main__':
-    print(encrypt('H',5))
+    print(encrypt('H',26))
+    print(encrypt('H',25))
+    print(encrypt('H',24))
+    print(encrypt('H',23))
+    print(encrypt('h',26))
