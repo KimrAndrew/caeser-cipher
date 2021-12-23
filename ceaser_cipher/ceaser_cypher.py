@@ -41,6 +41,9 @@ def encrypt(plain,shift):
     
     # return encrypted 
 
+def decrypt(encrypted,shift):
+    return encrypt(encrypted, -shift)
+
 if __name__ == '__main__':
     print(shift_char('H',26))
     print(shift_char('H',25))
@@ -51,4 +54,5 @@ if __name__ == '__main__':
     print(shift_char('h',24))
     print(shift_char('h',23))
     print(encrypt('Hello_World!!',3))
+    print(decrypt('Khoor_Zruog!!',3))
 
