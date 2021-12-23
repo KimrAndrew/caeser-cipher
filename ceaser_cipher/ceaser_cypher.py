@@ -17,6 +17,13 @@ def shift_char(char,shift):
     else:
         return char
 
+
+def encrypt(plain,shift):
+    encrypted = ''
+    for char in plain:
+        encrypted += shift_char(char,shift)
+    return encrypted
+
     # for char in plain:
         
     #     # assigned to None if  not upper
@@ -43,4 +50,5 @@ if __name__ == '__main__':
     print(shift_char('h',25))
     print(shift_char('h',24))
     print(shift_char('h',23))
+    print(encrypt('Hello_World!!',3))
 
