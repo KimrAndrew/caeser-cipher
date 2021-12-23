@@ -1,4 +1,4 @@
-def encrypt(char,shift):
+def shift_char(char,shift):
     char_code = ord(char)
     if ord('A') <= char_code <= ord('Z'):
         shifted_code = char_code + shift
@@ -35,12 +35,12 @@ def encrypt(char,shift):
     # return encrypted 
 
 if __name__ == '__main__':
-    print(encrypt('H',26))
-    print(encrypt('H',25))
-    print(encrypt('H',24))
-    print(encrypt('H',23))
-    print(encrypt('h',26))
-    print(encrypt('h',25))
-    print(encrypt('h',24))
-    print(encrypt('h',23))
+    print(shift_char('H',26))
+    print(shift_char('H',25))
+    print(shift_char('H',24))
+    print(shift_char('H',23))
+    print(shift_char('h',26))
+    print(shift_char('h',25))
+    print(shift_char('h',24))
+    print(shift_char('h',23))
 
