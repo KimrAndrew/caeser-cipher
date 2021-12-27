@@ -8,6 +8,8 @@ def shift_char(char,shift):
             shifted_code = ord('A') + wrap
         if shifted_code < ord('A'):
             wrap = 1 + (ord('A') % shifted_code) * -1
+            #print('SHIFT:',shifted_code)
+            #print('WRAP:',wrap)
             shifted_code = ord('Z') + wrap
         shifted_char = chr(shifted_code)
         return shifted_char
@@ -16,6 +18,9 @@ def shift_char(char,shift):
         if shifted_code > ord('z'):
             wrap = shifted_code % ord('z')
             shifted_code = ord('a') + wrap
+        if shifted_code < ord('a'):
+            wrap = 1 + (ord('a') % shifted_code) * -1
+            shifted_code = ord('z') + wrap
         shifted_char = chr(shifted_code)
         return shifted_char
     else:
@@ -49,8 +54,10 @@ def decrypt(encrypted,shift):
     return encrypt(encrypted, -shift)
 
 def crack(encrypted):
-    for shift in range(52):
-        print(decrypt(encrypted,shift))
+    cracked = []
+    for shift in range(26):
+        cracked.append(decrypt(encrypted,shift))
+    return cracked
 
 if __name__ == '__main__':
     print(shift_char('H',26))
@@ -64,5 +71,6 @@ if __name__ == '__main__':
     #print(encrypt('Hello_World!!',3))
     #print(decrypt('KHOOR_ZRUOG!!',3))
     #print(crack('KHOOR_ZRUOG!!'))
-    print(crack('Z'))
+    print(crack('HELLO_WORLD!!!'))
+    print(crack('hello_world!!!'))
 
