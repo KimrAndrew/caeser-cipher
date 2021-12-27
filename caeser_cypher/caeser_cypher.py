@@ -95,17 +95,18 @@ def get_most_valid_phrase(candidate_phrases):
 
 
 if __name__ == '__main__':
-    print(shift_char('H',26))
+    print(shift_char('p',20))
     #print(shift_char('H',25))
     #print(shift_char('H',24))
-    print(shift_char('H',23))
-    print(shift_char('l',17))
+    #print(shift_char('H',23))
+    #print(shift_char('l',17))
     #print(shift_char('h',25))
     #print(shift_char('h',24))
     #print(shift_char('h',23))
-    #print(encrypt('Hello_World!!',3))
+    print(encrypt('apple',20))
     #print(decrypt('KHOOR_ZRUOG!!',3))
     #print(crack('KHOOR_ZRUOG!!'))
     #print(crack('HELLO WORLD!!!'))
-    print(crack(encrypt('Hello World!!!',27)))
+    #print(crack(encrypt('Hello World!!!',27)))
+    pass
 
